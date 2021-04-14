@@ -17,7 +17,7 @@ public class Converter
 		public static void main(String[] args) throws IOException
 			{
 				getCoinValues();
-				gatherInfo();
+				getInfo();
 				calculateChange();
 
 			}
@@ -53,7 +53,7 @@ public class Converter
 						
 			}
 		
-		public static void gatherInfo()
+		public static void getInfo()
 			{
 				Scanner currencyIn = new Scanner(System.in);
 				System.out.println("Pick a currency: ");
@@ -92,8 +92,6 @@ public class Converter
 				
 				System.out.println("Change: " + (amountPaid - preservedCost));
 				System.out.println();
-//				System.out.println("Most efficient distribution: ");
-//				System.out.println();
 				for(int j = 0; j < numCoinsReq.length; j++)
 					System.out.println("\t" + (coinValues[currencyVal - 1][j]) + ": " + numCoinsReq[j]);
 				
